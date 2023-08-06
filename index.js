@@ -7,12 +7,12 @@ import restaurantRouter from "./routes/restaurant.routes.js";
 import menuRouter from "./routes/menu-item.routes.js";
 import cookieParser from "cookie-parser";
 import { credentials } from "./middleware/credentials.js";
-import { corsOptions } from "./config/corsOptions.js";
+// import { corsOptions } from "./config/corsOptions.js";
 
 dotenv.config();
 const app = express();
 app.use(credentials);
-app.use(cors(corsOptions));
+// app.use(cors(corsOptions));
 app.use(express.json({ limit: "50mb" }));
 app.use(cookieParser());
 
